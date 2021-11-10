@@ -1,7 +1,37 @@
-.App {
-  border-color: #008a77; /* Цвет границы */
-  border-style: solid; /* Стиль границы */
-  padding: 5px; /* Поля вокруг текста */
+.header-container {
+  height: 40px;
+  border: 2px solid red;
+  padding-top: 10px;
+}
+.div-left{
+  float: left;
+  margin-left: 10px;
+  padding-left: 10px;
+
+  border:2px solid #008a77;
+}
+.div-right{
+  float: right;
+  padding-right: 10px;
+  margin-right: 10px;
+}
+
+.right-navigation{
+  display: flex;
+  flex-flow: row wrap;
+  /* This aligns items to the end line on main-axis */
+  justify-content: flex-end;
+}
+
+.right-navigation div {
+  list-style-type:none;
+  float:left;
+  padding-left:10px;
+}
+
+.right-navigation img {
+  width: 25px; /* or any custom size */
+  height: 25px;
 }
 
 .App-logo {
