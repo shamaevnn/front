@@ -1,9 +1,27 @@
 import React, { useState } from "react";
 import styles from "./login.module.css";
+import { httpClient } from "../../httpClient";
+import { useNavigate } from "react-router";
 
 export const Login = () => {
+  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  const onLoginClick = async () => {
+    try {
+      const resp = await httpClient.post(
+        "/login",
+        { username: username, password: password },
+        { timeout: 10000 }
+      );
+      alert("Вы успешно залогинились.");
+      navigate("/")
+    } catch (e) {
+      alert(e);
+      console.error(e);
+    }
+  };
 
   return (
     <div className={styles.login}>
@@ -26,7 +44,9 @@ export const Login = () => {
           />
         </div>
 
-        <button className={styles.login_button}>login</button>
+        <button onClick={onLoginClick} className={styles.login_button}>
+          login
+        </button>
         <button
           onClick={() => {
             setUsername("");
