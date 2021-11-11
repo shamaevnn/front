@@ -10,6 +10,11 @@ npm i
 npm start
 ```
 
+### shortcut to create template for component
+```bash
+rsc
+```
+
 
 
 # Getting Started with Create React App

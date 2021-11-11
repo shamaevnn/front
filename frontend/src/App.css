@@ -1,3 +1,9 @@
+.home {
+  background-image: url(https://ssl.gstatic.com/ui/v1/icons/mail/themes/beach2/bg_mon_1440x900.jpg); /* Путь к фоновому изображению */
+  background-size: cover;
+  min-height: 100vh;
+}
+
 .header-container {
   height: 40px;
   border: 2px solid red;
